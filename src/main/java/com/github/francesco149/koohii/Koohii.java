@@ -1576,7 +1576,7 @@ public static class PPv2
         aim *= ar_bonus;
 
         if ((mods & MODS_HD) != 0) {
-            aim *= 1.18;
+            aim *= 1.03;
         }
 
         if ((mods & MODS_FL) != 0) {
@@ -1597,6 +1597,10 @@ public static class PPv2
         speed *= combo_break;
         speed *= acc_bonus;
         speed *= od_bonus;
+
+        if ((mods & MODS_HD) != 0) {
+            speed *= 1.18;
+        }
 
         /* acc pp ---------------------------------------------- */
         acc = Math.pow(1.52163, mapstats.od) *
