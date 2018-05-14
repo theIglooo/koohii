@@ -1576,7 +1576,7 @@ public static class PPv2
         aim *= ar_bonus;
 
         if ((mods & MODS_HD) != 0) {
-            aim *= 1.03;
+            aim *= (1.02 + (11.0 - mapstats.ar) / 50.0);
         }
 
         if ((mods & MODS_FL) != 0) {
